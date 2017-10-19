@@ -49,7 +49,7 @@ public class CoredataProvider: CoredataMappable, CoredataFetcher, CoredataCleana
     return queue
   }()
   
-  init(dataStack: DataStack) {
+  public init(dataStack: DataStack) {
     self.dataStack = dataStack
   }
 }

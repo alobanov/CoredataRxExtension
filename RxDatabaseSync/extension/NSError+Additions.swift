@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSError {
+public extension NSError {
   static func define(description: String, failureReason: String = "", code: Int = 1) -> NSError {
     let userInfo = [
       NSLocalizedDescriptionKey: description,

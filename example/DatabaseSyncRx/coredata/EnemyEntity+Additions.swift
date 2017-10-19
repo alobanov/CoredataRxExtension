@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import CoreData
+import RxDatabaseSync
 
 extension EnemyEntity {
   struct Fields {

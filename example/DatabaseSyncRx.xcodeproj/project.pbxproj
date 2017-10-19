@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		60D5C754D383667C2F254A89 /* Pods_PulsCommon_DatabaseSyncRxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0BB8772C0C935BD36D998F /* Pods_PulsCommon_DatabaseSyncRxTests.framework */; };
-		7A03BC0511FE49B0AEBFE1BE /* Pods_PulsCommon_DatabaseSyncRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A77CF24AD31C241D64AA3DF /* Pods_PulsCommon_DatabaseSyncRx.framework */; };
-		E8916E8D1F9875AA00057042 /* NSError+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916E8C1F9875AA00057042 /* NSError+Additions.swift */; };
+		46A343B41E365240DE7AA1D7 /* Pods_DatabaseSyncRxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDA4217714092F0C8DB8D5B /* Pods_DatabaseSyncRxTests.framework */; };
+		D0D6AB9F721A8B78D224FE35 /* Pods_DatabaseSyncRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992EFBF1ADA033A40C7AB0C6 /* Pods_DatabaseSyncRx.framework */; };
+		E8916EF41F98C9AD00057042 /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916EF31F98C9AD00057042 /* JSONReader.swift */; };
+		E8916EF71F98C9CE00057042 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916EF61F98C9CE00057042 /* FileReader.swift */; };
+		E8916EF81F98CB8500057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EF01F98C87000057042 /* enemies.json */; };
+		E8916EF91F98CB8700057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EF01F98C87000057042 /* enemies.json */; };
+		E8916EFB1F98CBE500057042 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFA1F98CBE500057042 /* heroes.json */; };
+		E8916EFC1F98CC4200057042 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFA1F98CBE500057042 /* heroes.json */; };
+		E8916EFE1F98CDC500057042 /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFD1F98CDC500057042 /* abilities.json */; };
+		E8916EFF1F98CE0A00057042 /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFD1F98CDC500057042 /* abilities.json */; };
 		E89B8BA51F9621A500B3A772 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA41F9621A500B3A772 /* HeroModel.swift */; };
 		E89B8BA71F9623BE00B3A772 /* EnemyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA61F9623BE00B3A772 /* EnemyModel.swift */; };
 		E89B8BA91F9623ED00B3A772 /* AbilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA81F9623ED00B3A772 /* AbilityModel.swift */; };
@@ -23,21 +30,6 @@
 		E8C738E11F934D0000329315 /* DatabaseSyncRxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C738E01F934D0000329315 /* DatabaseSyncRxTests.swift */; };
 		E8CE21E81F97213300166108 /* UniverseEntity+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE21E71F97213300166108 /* UniverseEntity+Additions.swift */; };
 		E8CE21EA1F97258000166108 /* UniverseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE21E91F97258000166108 /* UniverseModel.swift */; };
-		E8EF555F1F95E732006043EE /* EntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF555A1F95E72A006043EE /* EntityMapper.swift */; };
-		E8EF55601F95E738006043EE /* DeleteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55531F95E72A006043EE /* DeleteOperation.swift */; };
-		E8EF55611F95E73A006043EE /* EditOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55541F95E72A006043EE /* EditOperation.swift */; };
-		E8EF55621F95E73C006043EE /* SaveArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55551F95E72A006043EE /* SaveArrayOperation.swift */; };
-		E8EF55631F95E73F006043EE /* CoredataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55571F95E72A006043EE /* CoredataProvider.swift */; };
-		E8EF55641F95E743006043EE /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF555D1F95E72A006043EE /* AsyncOperation.swift */; };
-		E8EF55651F95E745006043EE /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF555E1F95E72A006043EE /* Aliases.swift */; };
-		E8EF55671F95F58D006043EE /* NSEntityDescription+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55661F95F58D006043EE /* NSEntityDescription+Additions.swift */; };
-		E8EF55691F95F5C5006043EE /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55681F95F5C5006043EE /* String+Additions.swift */; };
-		E8EF556C1F96006C006043EE /* Observable+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF556B1F96006C006043EE /* Observable+Operators.swift */; };
-		E8EF556E1F960118006043EE /* Observable+CoredataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF556D1F960118006043EE /* Observable+CoredataMapper.swift */; };
-		E8EF55701F96015C006043EE /* RxSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF556F1F96015C006043EE /* RxSchedulers.swift */; };
-		E8EF55721F960284006043EE /* Observer+Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55711F960284006043EE /* Observer+Transformer.swift */; };
-		E8EF55741F96058C006043EE /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55731F96058C006043EE /* Dictionary+Additions.swift */; };
-		E8EF55761F961354006043EE /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55751F961354006043EE /* Data+Additions.swift */; };
 		E8EF55791F961ABB006043EE /* AbilityEntity+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55781F961ABB006043EE /* AbilityEntity+Additions.swift */; };
 		E8EF557B1F961C78006043EE /* HeroEntity+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF557A1F961C78006043EE /* HeroEntity+Additions.swift */; };
 		E8EF557D1F961C99006043EE /* EnemyEntity+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF557C1F961C99006043EE /* EnemyEntity+Additions.swift */; };
@@ -54,13 +46,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1150ABA962E2286E1F573168 /* Pods-DatabaseSyncRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSyncRx.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSyncRx/Pods-DatabaseSyncRx.release.xcconfig"; sourceTree = "<group>"; };
+		21D866A99E54D1861FA861E7 /* Pods-DatabaseSyncRxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSyncRxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSyncRxTests/Pods-DatabaseSyncRxTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C0BB8772C0C935BD36D998F /* Pods_PulsCommon_DatabaseSyncRxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsCommon_DatabaseSyncRxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A77CF24AD31C241D64AA3DF /* Pods_PulsCommon_DatabaseSyncRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PulsCommon_DatabaseSyncRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FB62CC2ED49246045311402 /* Pods-PulsCommon-DatabaseSyncRxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsCommon-DatabaseSyncRxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRxTests/Pods-PulsCommon-DatabaseSyncRxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E4717AF0F0A7689AE4132FB /* Pods-PulsCommon-DatabaseSyncRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsCommon-DatabaseSyncRx.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRx/Pods-PulsCommon-DatabaseSyncRx.release.xcconfig"; sourceTree = "<group>"; };
+		9658DC7ABE479F8CABF4408C /* Pods-DatabaseSyncRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSyncRx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSyncRx/Pods-DatabaseSyncRx.debug.xcconfig"; sourceTree = "<group>"; };
+		992EFBF1ADA033A40C7AB0C6 /* Pods_DatabaseSyncRx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSyncRx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A57298430194FA93646B7A2F /* Pods-DatabaseSyncRxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatabaseSyncRxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DatabaseSyncRxTests/Pods-DatabaseSyncRxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA34327DFB4C088AE139E5BC /* Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRxTests/Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig"; sourceTree = "<group>"; };
 		ABC53B55D64F16A19524A568 /* Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRx/Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig"; sourceTree = "<group>"; };
-		E8916E8C1F9875AA00057042 /* NSError+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Additions.swift"; sourceTree = "<group>"; };
+		ADDA4217714092F0C8DB8D5B /* Pods_DatabaseSyncRxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSyncRxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8916EF01F98C87000057042 /* enemies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
+		E8916EF31F98C9AD00057042 /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
+		E8916EF61F98C9CE00057042 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		E8916EFA1F98CBE500057042 /* heroes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
+		E8916EFD1F98CDC500057042 /* abilities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = abilities.json; sourceTree = "<group>"; };
 		E89B8BA41F9621A500B3A772 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		E89B8BA61F9623BE00B3A772 /* EnemyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyModel.swift; sourceTree = "<group>"; };
 		E89B8BA81F9623ED00B3A772 /* AbilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityModel.swift; sourceTree = "<group>"; };
@@ -78,21 +80,6 @@
 		E8C738E21F934D0000329315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CE21E71F97213300166108 /* UniverseEntity+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniverseEntity+Additions.swift"; sourceTree = "<group>"; };
 		E8CE21E91F97258000166108 /* UniverseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseModel.swift; sourceTree = "<group>"; };
-		E8EF55531F95E72A006043EE /* DeleteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOperation.swift; sourceTree = "<group>"; };
-		E8EF55541F95E72A006043EE /* EditOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOperation.swift; sourceTree = "<group>"; };
-		E8EF55551F95E72A006043EE /* SaveArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveArrayOperation.swift; sourceTree = "<group>"; };
-		E8EF55571F95E72A006043EE /* CoredataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataProvider.swift; sourceTree = "<group>"; };
-		E8EF555A1F95E72A006043EE /* EntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityMapper.swift; sourceTree = "<group>"; };
-		E8EF555D1F95E72A006043EE /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
-		E8EF555E1F95E72A006043EE /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
-		E8EF55661F95F58D006043EE /* NSEntityDescription+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSEntityDescription+Additions.swift"; sourceTree = "<group>"; };
-		E8EF55681F95F5C5006043EE /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
-		E8EF556B1F96006C006043EE /* Observable+Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Operators.swift"; sourceTree = "<group>"; };
-		E8EF556D1F960118006043EE /* Observable+CoredataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+CoredataMapper.swift"; sourceTree = "<group>"; };
-		E8EF556F1F96015C006043EE /* RxSchedulers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSchedulers.swift; sourceTree = "<group>"; };
-		E8EF55711F960284006043EE /* Observer+Transformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observer+Transformer.swift"; sourceTree = "<group>"; };
-		E8EF55731F96058C006043EE /* Dictionary+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
-		E8EF55751F961354006043EE /* Data+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
 		E8EF55781F961ABB006043EE /* AbilityEntity+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AbilityEntity+Additions.swift"; sourceTree = "<group>"; };
 		E8EF557A1F961C78006043EE /* HeroEntity+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroEntity+Additions.swift"; sourceTree = "<group>"; };
 		E8EF557C1F961C99006043EE /* EnemyEntity+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnemyEntity+Additions.swift"; sourceTree = "<group>"; };
@@ -103,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A03BC0511FE49B0AEBFE1BE /* Pods_PulsCommon_DatabaseSyncRx.framework in Frameworks */,
+				D0D6AB9F721A8B78D224FE35 /* Pods_DatabaseSyncRx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D5C754D383667C2F254A89 /* Pods_PulsCommon_DatabaseSyncRxTests.framework in Frameworks */,
+				46A343B41E365240DE7AA1D7 /* Pods_DatabaseSyncRxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +112,10 @@
 				7E4717AF0F0A7689AE4132FB /* Pods-PulsCommon-DatabaseSyncRx.release.xcconfig */,
 				5FB62CC2ED49246045311402 /* Pods-PulsCommon-DatabaseSyncRxTests.debug.xcconfig */,
 				AA34327DFB4C088AE139E5BC /* Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig */,
+				9658DC7ABE479F8CABF4408C /* Pods-DatabaseSyncRx.debug.xcconfig */,
+				1150ABA962E2286E1F573168 /* Pods-DatabaseSyncRx.release.xcconfig */,
+				A57298430194FA93646B7A2F /* Pods-DatabaseSyncRxTests.debug.xcconfig */,
+				21D866A99E54D1861FA861E7 /* Pods-DatabaseSyncRxTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,8 +125,36 @@
 			children = (
 				4A77CF24AD31C241D64AA3DF /* Pods_PulsCommon_DatabaseSyncRx.framework */,
 				3C0BB8772C0C935BD36D998F /* Pods_PulsCommon_DatabaseSyncRxTests.framework */,
+				992EFBF1ADA033A40C7AB0C6 /* Pods_DatabaseSyncRx.framework */,
+				ADDA4217714092F0C8DB8D5B /* Pods_DatabaseSyncRxTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8916EEF1F98C85000057042 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				E8916EF01F98C87000057042 /* enemies.json */,
+				E8916EFA1F98CBE500057042 /* heroes.json */,
+				E8916EFD1F98CDC500057042 /* abilities.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		E8916EF21F98C9AD00057042 /* JSONReader */ = {
+			isa = PBXGroup;
+			children = (
+				E8916EF31F98C9AD00057042 /* JSONReader.swift */,
+			);
+			path = JSONReader;
+			sourceTree = "<group>";
+		};
+		E8916EF51F98C9CE00057042 /* FileReader */ = {
+			isa = PBXGroup;
+			children = (
+				E8916EF61F98C9CE00057042 /* FileReader.swift */,
+			);
+			path = FileReader;
 			sourceTree = "<group>";
 		};
 		E89B8BA31F96218800B3A772 /* ponso */ = {
@@ -152,7 +171,6 @@
 		E8C738BC1F934D0000329315 = {
 			isa = PBXGroup;
 			children = (
-				E8EF55321F95D9B8006043EE /* DatabaseRxAdditions */,
 				E8C738C71F934D0000329315 /* DatabaseSyncRx */,
 				E8C738DF1F934D0000329315 /* DatabaseSyncRxTests */,
 				E8C738C61F934D0000329315 /* Products */,
@@ -173,6 +191,8 @@
 		E8C738C71F934D0000329315 /* DatabaseSyncRx */ = {
 			isa = PBXGroup;
 			children = (
+				E8916EF51F98C9CE00057042 /* FileReader */,
+				E8916EF21F98C9AD00057042 /* JSONReader */,
 				E89B8BA31F96218800B3A772 /* ponso */,
 				E8EF55771F961A7A006043EE /* coredata */,
 				E8C738C81F934D0000329315 /* AppDelegate.swift */,
@@ -189,97 +209,11 @@
 		E8C738DF1F934D0000329315 /* DatabaseSyncRxTests */ = {
 			isa = PBXGroup;
 			children = (
+				E8916EEF1F98C85000057042 /* json */,
 				E8C738E01F934D0000329315 /* DatabaseSyncRxTests.swift */,
 				E8C738E21F934D0000329315 /* Info.plist */,
 			);
 			path = DatabaseSyncRxTests;
-			sourceTree = "<group>";
-		};
-		E8EF55321F95D9B8006043EE /* DatabaseRxAdditions */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF55581F95E72A006043EE /* extension */,
-				E8EF55511F95E72A006043EE /* provider */,
-				E8EF555B1F95E72A006043EE /* utils */,
-			);
-			path = DatabaseRxAdditions;
-			sourceTree = "<group>";
-		};
-		E8EF55511F95E72A006043EE /* provider */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF555A1F95E72A006043EE /* EntityMapper.swift */,
-				E8EF55521F95E72A006043EE /* operation */,
-				E8EF55561F95E72A006043EE /* coredata */,
-			);
-			path = provider;
-			sourceTree = "<group>";
-		};
-		E8EF55521F95E72A006043EE /* operation */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF55531F95E72A006043EE /* DeleteOperation.swift */,
-				E8EF55541F95E72A006043EE /* EditOperation.swift */,
-				E8EF55551F95E72A006043EE /* SaveArrayOperation.swift */,
-			);
-			path = operation;
-			sourceTree = "<group>";
-		};
-		E8EF55561F95E72A006043EE /* coredata */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF55571F95E72A006043EE /* CoredataProvider.swift */,
-			);
-			path = coredata;
-			sourceTree = "<group>";
-		};
-		E8EF55581F95E72A006043EE /* extension */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF556A1F95FFE9006043EE /* observable */,
-				E8EF55591F95E72A006043EE /* managedObject */,
-				E8EF55731F96058C006043EE /* Dictionary+Additions.swift */,
-				E8EF55681F95F5C5006043EE /* String+Additions.swift */,
-				E8EF55751F961354006043EE /* Data+Additions.swift */,
-				E8916E8C1F9875AA00057042 /* NSError+Additions.swift */,
-			);
-			path = extension;
-			sourceTree = "<group>";
-		};
-		E8EF55591F95E72A006043EE /* managedObject */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF55661F95F58D006043EE /* NSEntityDescription+Additions.swift */,
-			);
-			path = managedObject;
-			sourceTree = "<group>";
-		};
-		E8EF555B1F95E72A006043EE /* utils */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF556F1F96015C006043EE /* RxSchedulers.swift */,
-				E8EF555C1F95E72A006043EE /* operation */,
-				E8EF555E1F95E72A006043EE /* Aliases.swift */,
-			);
-			path = utils;
-			sourceTree = "<group>";
-		};
-		E8EF555C1F95E72A006043EE /* operation */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF555D1F95E72A006043EE /* AsyncOperation.swift */,
-			);
-			path = operation;
-			sourceTree = "<group>";
-		};
-		E8EF556A1F95FFE9006043EE /* observable */ = {
-			isa = PBXGroup;
-			children = (
-				E8EF55711F960284006043EE /* Observer+Transformer.swift */,
-				E8EF556D1F960118006043EE /* Observable+CoredataMapper.swift */,
-				E8EF556B1F96006C006043EE /* Observable+Operators.swift */,
-			);
-			path = observable;
 			sourceTree = "<group>";
 		};
 		E8EF55771F961A7A006043EE /* coredata */ = {
@@ -387,7 +321,10 @@
 			files = (
 				E8C738D61F934D0000329315 /* LaunchScreen.storyboard in Resources */,
 				E8C738D31F934D0000329315 /* Assets.xcassets in Resources */,
+				E8916EFF1F98CE0A00057042 /* abilities.json in Resources */,
+				E8916EF81F98CB8500057042 /* enemies.json in Resources */,
 				E8C738CE1F934D0000329315 /* Main.storyboard in Resources */,
+				E8916EFC1F98CC4200057042 /* heroes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +332,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8916EF91F98CB8700057042 /* enemies.json in Resources */,
+				E8916EFB1F98CBE500057042 /* heroes.json in Resources */,
+				E8916EFE1F98CDC500057042 /* abilities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRxTests/Pods-PulsCommon-DatabaseSyncRxTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DatabaseSyncRxTests/Pods-DatabaseSyncRxTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		368D7EDBA3DB534A20846217 /* [CP] Copy Pods Resources */ = {
@@ -428,7 +368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRx/Pods-PulsCommon-DatabaseSyncRx-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DatabaseSyncRx/Pods-DatabaseSyncRx-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3B7C2E82164D89DA136FB7FD /* [CP] Check Pods Manifest.lock */ = {
@@ -442,7 +382,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PulsCommon-DatabaseSyncRxTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DatabaseSyncRxTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -460,7 +400,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PulsCommon-DatabaseSyncRx-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DatabaseSyncRx-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -473,28 +413,28 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRxTests/Pods-PulsCommon-DatabaseSyncRxTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-DatabaseSyncRxTests/Pods-DatabaseSyncRxTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDatabaseSync/RxDatabaseSync.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Sync/Sync.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDatabaseSync.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sync.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRxTests/Pods-PulsCommon-DatabaseSyncRxTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DatabaseSyncRxTests/Pods-DatabaseSyncRxTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED7D6A90FD435FA2E192ABDA /* [CP] Embed Pods Frameworks */ = {
@@ -503,30 +443,26 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRx/Pods-PulsCommon-DatabaseSyncRx-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-DatabaseSyncRx/Pods-DatabaseSyncRx-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDatabaseSync/RxDatabaseSync.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Sync/Sync.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDatabaseSync.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sync.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRx/Pods-PulsCommon-DatabaseSyncRx-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DatabaseSyncRx/Pods-DatabaseSyncRx-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -536,34 +472,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8EF55651F95E745006043EE /* Aliases.swift in Sources */,
-				E8EF55621F95E73C006043EE /* SaveArrayOperation.swift in Sources */,
 				E8EF557B1F961C78006043EE /* HeroEntity+Additions.swift in Sources */,
-				E8916E8D1F9875AA00057042 /* NSError+Additions.swift in Sources */,
-				E8EF55691F95F5C5006043EE /* String+Additions.swift in Sources */,
-				E8EF55601F95E738006043EE /* DeleteOperation.swift in Sources */,
-				E8EF55701F96015C006043EE /* RxSchedulers.swift in Sources */,
-				E8EF55741F96058C006043EE /* Dictionary+Additions.swift in Sources */,
 				E8EF557D1F961C99006043EE /* EnemyEntity+Additions.swift in Sources */,
-				E8EF55611F95E73A006043EE /* EditOperation.swift in Sources */,
+				E8916EF71F98C9CE00057042 /* FileReader.swift in Sources */,
 				E89B8BAB1F96272800B3A772 /* CoredataConfigurator.swift in Sources */,
 				E8EF55791F961ABB006043EE /* AbilityEntity+Additions.swift in Sources */,
 				E8C738CB1F934D0000329315 /* ViewController.swift in Sources */,
-				E8EF555F1F95E732006043EE /* EntityMapper.swift in Sources */,
-				E8EF556C1F96006C006043EE /* Observable+Operators.swift in Sources */,
 				E89B8BA71F9623BE00B3A772 /* EnemyModel.swift in Sources */,
 				E89B8BA51F9621A500B3A772 /* HeroModel.swift in Sources */,
-				E8EF556E1F960118006043EE /* Observable+CoredataMapper.swift in Sources */,
+				E8916EF41F98C9AD00057042 /* JSONReader.swift in Sources */,
 				E8CE21EA1F97258000166108 /* UniverseModel.swift in Sources */,
-				E8EF55671F95F58D006043EE /* NSEntityDescription+Additions.swift in Sources */,
-				E8EF55721F960284006043EE /* Observer+Transformer.swift in Sources */,
 				E8C738C91F934D0000329315 /* AppDelegate.swift in Sources */,
 				E8C738D11F934D0000329315 /* DatabaseSyncRx.xcdatamodeld in Sources */,
 				E89B8BA91F9623ED00B3A772 /* AbilityModel.swift in Sources */,
-				E8EF55761F961354006043EE /* Data+Additions.swift in Sources */,
-				E8EF55641F95E743006043EE /* AsyncOperation.swift in Sources */,
 				E8CE21E81F97213300166108 /* UniverseEntity+Additions.swift in Sources */,
-				E8EF55631F95E73F006043EE /* CoredataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,7 +636,7 @@
 		};
 		E8C738E61F934D0000329315 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABC53B55D64F16A19524A568 /* Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig */;
+			baseConfigurationReference = 9658DC7ABE479F8CABF4408C /* Pods-DatabaseSyncRx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -730,7 +652,7 @@
 		};
 		E8C738E71F934D0000329315 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7E4717AF0F0A7689AE4132FB /* Pods-PulsCommon-DatabaseSyncRx.release.xcconfig */;
+			baseConfigurationReference = 1150ABA962E2286E1F573168 /* Pods-DatabaseSyncRx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -746,12 +668,13 @@
 		};
 		E8C738E91F934D0000329315 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FB62CC2ED49246045311402 /* Pods-PulsCommon-DatabaseSyncRxTests.debug.xcconfig */;
+			baseConfigurationReference = A57298430194FA93646B7A2F /* Pods-DatabaseSyncRxTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9W2XCDBH5;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DatabaseSyncRxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alobanov.DatabaseSyncRxTests;
@@ -764,12 +687,13 @@
 		};
 		E8C738EA1F934D0000329315 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA34327DFB4C088AE139E5BC /* Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig */;
+			baseConfigurationReference = 21D866A99E54D1861FA861E7 /* Pods-DatabaseSyncRxTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9W2XCDBH5;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DatabaseSyncRxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alobanov.DatabaseSyncRxTests;

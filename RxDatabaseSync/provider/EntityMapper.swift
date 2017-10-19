@@ -15,22 +15,22 @@ public protocol NSManagedObjectMappable where Self:NSManagedObject {
   static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T>
 }
 
-class EntityMapper<Parent: NSManagedObjectMappable> {
+public class EntityMapper<Parent: NSManagedObjectMappable> {
   private var context: NSManagedObjectContext
   private var object: JSONDictionary = [:]
   private var objects: JSONArrayDictionary = []
   
-  init(context: NSManagedObjectContext, object: JSONDictionary) {
+  public init(context: NSManagedObjectContext, object: JSONDictionary) {
     self.context = context
     self.object = object
   }
   
-  init(context: NSManagedObjectContext, objects: JSONArrayDictionary) {
+  public init(context: NSManagedObjectContext, objects: JSONArrayDictionary) {
     self.context = context
     self.objects = objects
   }
   
- func mapRelationToOne<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<T?>  {
+ public func mapRelationToOne<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<T?>  {
     guard let relationKey = syncRelationKey(type: Parent.self, relation: relation) else {
       return Observable.just(nil)
     }
@@ -44,7 +44,7 @@ class EntityMapper<Parent: NSManagedObjectMappable> {
     return mapping
   }
   
-  func mapRelationToMany<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<[T]?>  {
+  public func mapRelationToMany<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<[T]?>  {
     var mapping: Observable<[T]?>
     guard let relationKey = syncRelationKey(type: Parent.self, relation: relation) else {
       return Observable.just(nil)
@@ -59,7 +59,7 @@ class EntityMapper<Parent: NSManagedObjectMappable> {
     return mapping
   }
   
-  func mapObject<T:NSManagedObjectMappable>(type: T.Type) -> Observable<T> {
+  public func mapObject<T:NSManagedObjectMappable>(type: T.Type) -> Observable<T> {
     return Observable<T>.create({ observer -> Disposable in
       let entityName = String(describing: T.self)
       do {
@@ -77,7 +77,7 @@ class EntityMapper<Parent: NSManagedObjectMappable> {
     })
   }
   
-  func mapArray<U: NSManagedObjectMappable>(type: U.Type) -> Observable<[U]> {
+  public func mapArray<U: NSManagedObjectMappable>(type: U.Type) -> Observable<[U]> {
     var operations = [Observable<U>]()
     for obj in objects {
       let operation: Observable<U> = U.map(type: U.self, object: obj, context: context)

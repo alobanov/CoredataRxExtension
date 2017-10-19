@@ -8,7 +8,7 @@
 
 import Foundation
 import Sync
-import CoreData
+import RxDatabaseSync
 
 class CoredataConfigurator {
   
