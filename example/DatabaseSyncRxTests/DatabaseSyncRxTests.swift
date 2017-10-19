@@ -14,23 +14,19 @@ import RxDatabaseSync
 
 class DatabaseSyncRxTests: XCTestCase {
   
-  let provider = CoredataConfigurator.shared.queryProvider
+  let coredataConfigurator  = CoredataConfigurator(name: "DatabaseSyncRx", inMemory: false  )
+  var provider: CoredataProvider!
   let bag = DisposeBag()
-  
-  var scheduler: TestScheduler!
-  var subscription: Disposable!
   
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    scheduler = TestScheduler(initialClock: 0)
+    provider = coredataConfigurator.queryProvider
   }
   
   override func tearDown() {
-    scheduler.scheduleAt(1000) {
-      self.subscription.dispose()
-    }
     super.tearDown()
+    self.provider.clean(doNotDeleteEntities: []).subscribe().disposed(by: bag)
   }
   
   func testNestedMapping() {
@@ -51,12 +47,14 @@ class DatabaseSyncRxTests: XCTestCase {
     
     // perform both parsing signals
     Observable.zip(enemies, heroes)
-      .map({ (_, _) in
-        guard let heroes: [HeroModel] = self.provider.models(type: HeroEntity.self, predicate: all, sortBy: "id", asc: true) else {
+      .map({ [weak self] _ in
+        guard let heroes: [HeroModel] = self?.provider.models(type: HeroEntity.self,
+                                                              predicate: all, sortBy: "id", asc: true) else {
           throw NSError.define(description: "Model not found in database")
         }
         
-        guard let enemies: [EnemyModel] = self.provider.models(type: EnemyEntity.self, predicate: all, sortBy: "id", asc: true) else {
+        guard let enemies: [EnemyModel] = self?.provider.models(type: EnemyEntity.self,
+                                                                predicate: all, sortBy: "id", asc: true) else {
           throw NSError.define(description: "Model not found in database")
         }
         
@@ -69,10 +67,7 @@ class DatabaseSyncRxTests: XCTestCase {
       }).addDisposableTo(bag)
   }
   
-  func testExample() {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
+  func testExample() {    
     let expect = expectation(description: #function)
     var result = ""
     
@@ -93,27 +88,20 @@ class DatabaseSyncRxTests: XCTestCase {
         XCTFail(error.localizedDescription)
       }).disposed(by: bag)
     
-    provider.clean(doNotDeleteEntities: []).subscribe(onError: { error in
-      XCTFail("Fail clean database")
-    }).disposed(by: bag)
-    
     waitForExpectations(timeout: 1.0) { error in
       guard error == nil else {
         XCTFail(error!.localizedDescription)
         return
       }
       
-      // 5
+      if let ab: [AbilityModel] = self.provider.models(type: AbilityEntity.self, predicate: NSPredicate(value: true)) {
+        XCTAssertEqual(5, ab.count)
+      } else {
+        XCTFail("Ability not founds")
+      }
+      
       XCTAssertEqual("Реактивная адаптация", result)
     }
   }
-  
-  func testPerformanceExample() {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
-    }
-  }
-  
 }
 

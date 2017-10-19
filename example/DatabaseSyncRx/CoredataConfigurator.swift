@@ -10,22 +10,24 @@ import Foundation
 import Sync
 import RxDatabaseSync
 
-class CoredataConfigurator {
+public class CoredataConfigurator {
   
   // Singletone
-  static let shared = CoredataConfigurator()
-  private lazy var coredataStack = DataStack(modelName: "DatabaseSyncRx")
+  private var coredataStack: DataStack
   
   // MARK: - Initialization
-  private init() {
-    
+  public init(name: String, inMemory: Bool = false) {
+    let dataStackStoreType: DataStackStoreType = inMemory ? .inMemory : .sqLite
+    self.coredataStack = DataStack(modelName: name, storeType: dataStackStoreType)
   }
   
   lazy var queryProvider: CoredataProvider = {
     return CoredataProvider(dataStack: self.coredataStack)
   }()
   
-  func deleteRealm() {
-    self.coredataStack.drop()
+  func drop(completion: @escaping (NSError?)->Void) {
+    self.coredataStack.drop { error in
+      completion(error)
+    }
   }
 }

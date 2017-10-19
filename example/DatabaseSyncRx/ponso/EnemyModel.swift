@@ -15,7 +15,7 @@ struct EnemyModel: Mappable {
   var realName: String?
   var heroes: [HeroModel]?
   var abilities: [AbilityModel]?
-  var univers: UniverseModel?
+  var universe: UniverseModel?
   
   init?(map: Map) {}
   
@@ -26,5 +26,6 @@ struct EnemyModel: Mappable {
     realName <- map["real_name"]
     heroes <- map["heroes"]
     abilities <- map["abilities"]
+    universe <- map["universe"]
   }
 }

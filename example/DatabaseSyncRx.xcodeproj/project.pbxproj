@@ -11,12 +11,13 @@
 		D0D6AB9F721A8B78D224FE35 /* Pods_DatabaseSyncRx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 992EFBF1ADA033A40C7AB0C6 /* Pods_DatabaseSyncRx.framework */; };
 		E8916EF41F98C9AD00057042 /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916EF31F98C9AD00057042 /* JSONReader.swift */; };
 		E8916EF71F98C9CE00057042 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916EF61F98C9CE00057042 /* FileReader.swift */; };
-		E8916EF81F98CB8500057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EF01F98C87000057042 /* enemies.json */; };
-		E8916EF91F98CB8700057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EF01F98C87000057042 /* enemies.json */; };
 		E8916EFB1F98CBE500057042 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFA1F98CBE500057042 /* heroes.json */; };
 		E8916EFC1F98CC4200057042 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFA1F98CBE500057042 /* heroes.json */; };
 		E8916EFE1F98CDC500057042 /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFD1F98CDC500057042 /* abilities.json */; };
 		E8916EFF1F98CE0A00057042 /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFD1F98CDC500057042 /* abilities.json */; };
+		E8916F231F9915D000057042 /* CoredataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916F221F9915D000057042 /* CoredataFetcher.swift */; };
+		E8916F251F992DF300057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916F241F992DF300057042 /* enemies.json */; };
+		E8916F261F992DF900057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916F241F992DF300057042 /* enemies.json */; };
 		E89B8BA51F9621A500B3A772 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA41F9621A500B3A772 /* HeroModel.swift */; };
 		E89B8BA71F9623BE00B3A772 /* EnemyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA61F9623BE00B3A772 /* EnemyModel.swift */; };
 		E89B8BA91F9623ED00B3A772 /* AbilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA81F9623ED00B3A772 /* AbilityModel.swift */; };
@@ -58,11 +59,12 @@
 		AA34327DFB4C088AE139E5BC /* Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRxTests/Pods-PulsCommon-DatabaseSyncRxTests.release.xcconfig"; sourceTree = "<group>"; };
 		ABC53B55D64F16A19524A568 /* Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PulsCommon-DatabaseSyncRx/Pods-PulsCommon-DatabaseSyncRx.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDA4217714092F0C8DB8D5B /* Pods_DatabaseSyncRxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DatabaseSyncRxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8916EF01F98C87000057042 /* enemies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
 		E8916EF31F98C9AD00057042 /* JSONReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
 		E8916EF61F98C9CE00057042 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		E8916EFA1F98CBE500057042 /* heroes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		E8916EFD1F98CDC500057042 /* abilities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = abilities.json; sourceTree = "<group>"; };
+		E8916F221F9915D000057042 /* CoredataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataFetcher.swift; sourceTree = "<group>"; };
+		E8916F241F992DF300057042 /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
 		E89B8BA41F9621A500B3A772 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		E89B8BA61F9623BE00B3A772 /* EnemyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyModel.swift; sourceTree = "<group>"; };
 		E89B8BA81F9623ED00B3A772 /* AbilityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityModel.swift; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 		E8916EEF1F98C85000057042 /* json */ = {
 			isa = PBXGroup;
 			children = (
-				E8916EF01F98C87000057042 /* enemies.json */,
+				E8916F241F992DF300057042 /* enemies.json */,
 				E8916EFA1F98CBE500057042 /* heroes.json */,
 				E8916EFD1F98CDC500057042 /* abilities.json */,
 			);
@@ -219,6 +221,7 @@
 			children = (
 				E8916EEF1F98C85000057042 /* json */,
 				E8C738E01F934D0000329315 /* DatabaseSyncRxTests.swift */,
+				E8916F221F9915D000057042 /* CoredataFetcher.swift */,
 				E8C738E21F934D0000329315 /* Info.plist */,
 			);
 			path = DatabaseSyncRxTests;
@@ -330,8 +333,8 @@
 				E8C738D61F934D0000329315 /* LaunchScreen.storyboard in Resources */,
 				E8C738D31F934D0000329315 /* Assets.xcassets in Resources */,
 				E8916EFF1F98CE0A00057042 /* abilities.json in Resources */,
-				E8916EF81F98CB8500057042 /* enemies.json in Resources */,
 				E8C738CE1F934D0000329315 /* Main.storyboard in Resources */,
+				E8916F261F992DF900057042 /* enemies.json in Resources */,
 				E8916EFC1F98CC4200057042 /* heroes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,8 +343,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8916EF91F98CB8700057042 /* enemies.json in Resources */,
 				E8916EFB1F98CBE500057042 /* heroes.json in Resources */,
+				E8916F251F992DF300057042 /* enemies.json in Resources */,
 				E8916EFE1F98CDC500057042 /* abilities.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8916F231F9915D000057042 /* CoredataFetcher.swift in Sources */,
 				E8C738E11F934D0000329315 /* DatabaseSyncRxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
