@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import Sync
 import RxDatabaseSync
 
 class ViewController: UIViewController {

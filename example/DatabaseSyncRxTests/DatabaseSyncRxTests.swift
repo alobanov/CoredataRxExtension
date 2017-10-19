@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import RxTest
+import RxDatabaseSync
 @testable import DatabaseSyncRx
 
 class DatabaseSyncRxTests: XCTestCase {

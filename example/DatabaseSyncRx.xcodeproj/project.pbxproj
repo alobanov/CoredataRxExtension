@@ -157,6 +157,15 @@
 			path = FileReader;
 			sourceTree = "<group>";
 		};
+		E8916F211F98EC5600057042 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				E8916EF51F98C9CE00057042 /* FileReader */,
+				E8916EF21F98C9AD00057042 /* JSONReader */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		E89B8BA31F96218800B3A772 /* ponso */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,8 +200,7 @@
 		E8C738C71F934D0000329315 /* DatabaseSyncRx */ = {
 			isa = PBXGroup;
 			children = (
-				E8916EF51F98C9CE00057042 /* FileReader */,
-				E8916EF21F98C9AD00057042 /* JSONReader */,
+				E8916F211F98EC5600057042 /* utils */,
 				E89B8BA31F96218800B3A772 /* ponso */,
 				E8EF55771F961A7A006043EE /* coredata */,
 				E8C738C81F934D0000329315 /* AppDelegate.swift */,
