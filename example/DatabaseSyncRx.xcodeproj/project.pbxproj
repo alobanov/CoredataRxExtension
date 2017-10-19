@@ -15,7 +15,7 @@
 		E8916EFC1F98CC4200057042 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFA1F98CBE500057042 /* heroes.json */; };
 		E8916EFE1F98CDC500057042 /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFD1F98CDC500057042 /* abilities.json */; };
 		E8916EFF1F98CE0A00057042 /* abilities.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916EFD1F98CDC500057042 /* abilities.json */; };
-		E8916F231F9915D000057042 /* CoredataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916F221F9915D000057042 /* CoredataFetcher.swift */; };
+		E8916F231F9915D000057042 /* CoredataFetcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8916F221F9915D000057042 /* CoredataFetcherTests.swift */; };
 		E8916F251F992DF300057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916F241F992DF300057042 /* enemies.json */; };
 		E8916F261F992DF900057042 /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = E8916F241F992DF300057042 /* enemies.json */; };
 		E89B8BA51F9621A500B3A772 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89B8BA41F9621A500B3A772 /* HeroModel.swift */; };
@@ -28,7 +28,7 @@
 		E8C738D11F934D0000329315 /* DatabaseSyncRx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8C738CF1F934D0000329315 /* DatabaseSyncRx.xcdatamodeld */; };
 		E8C738D31F934D0000329315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C738D21F934D0000329315 /* Assets.xcassets */; };
 		E8C738D61F934D0000329315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8C738D41F934D0000329315 /* LaunchScreen.storyboard */; };
-		E8C738E11F934D0000329315 /* DatabaseSyncRxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C738E01F934D0000329315 /* DatabaseSyncRxTests.swift */; };
+		E8C738E11F934D0000329315 /* CoredataMappableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C738E01F934D0000329315 /* CoredataMappableTests.swift */; };
 		E8CE21E81F97213300166108 /* UniverseEntity+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE21E71F97213300166108 /* UniverseEntity+Additions.swift */; };
 		E8CE21EA1F97258000166108 /* UniverseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CE21E91F97258000166108 /* UniverseModel.swift */; };
 		E8EF55791F961ABB006043EE /* AbilityEntity+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EF55781F961ABB006043EE /* AbilityEntity+Additions.swift */; };
@@ -63,7 +63,7 @@
 		E8916EF61F98C9CE00057042 /* FileReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		E8916EFA1F98CBE500057042 /* heroes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		E8916EFD1F98CDC500057042 /* abilities.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = abilities.json; sourceTree = "<group>"; };
-		E8916F221F9915D000057042 /* CoredataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataFetcher.swift; sourceTree = "<group>"; };
+		E8916F221F9915D000057042 /* CoredataFetcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataFetcherTests.swift; sourceTree = "<group>"; };
 		E8916F241F992DF300057042 /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
 		E89B8BA41F9621A500B3A772 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 		E89B8BA61F9623BE00B3A772 /* EnemyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyModel.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		E8C738D51F934D0000329315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8C738D71F934D0000329315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C738DC1F934D0000329315 /* DatabaseSyncRxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseSyncRxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8C738E01F934D0000329315 /* DatabaseSyncRxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSyncRxTests.swift; sourceTree = "<group>"; };
+		E8C738E01F934D0000329315 /* CoredataMappableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataMappableTests.swift; sourceTree = "<group>"; };
 		E8C738E21F934D0000329315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CE21E71F97213300166108 /* UniverseEntity+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniverseEntity+Additions.swift"; sourceTree = "<group>"; };
 		E8CE21E91F97258000166108 /* UniverseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniverseModel.swift; sourceTree = "<group>"; };
@@ -220,8 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				E8916EEF1F98C85000057042 /* json */,
-				E8C738E01F934D0000329315 /* DatabaseSyncRxTests.swift */,
-				E8916F221F9915D000057042 /* CoredataFetcher.swift */,
+				E8C738E01F934D0000329315 /* CoredataMappableTests.swift */,
+				E8916F221F9915D000057042 /* CoredataFetcherTests.swift */,
 				E8C738E21F934D0000329315 /* Info.plist */,
 			);
 			path = DatabaseSyncRxTests;
@@ -504,8 +504,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8916F231F9915D000057042 /* CoredataFetcher.swift in Sources */,
-				E8C738E11F934D0000329315 /* DatabaseSyncRxTests.swift in Sources */,
+				E8916F231F9915D000057042 /* CoredataFetcherTests.swift in Sources */,
+				E8C738E11F934D0000329315 /* CoredataMappableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

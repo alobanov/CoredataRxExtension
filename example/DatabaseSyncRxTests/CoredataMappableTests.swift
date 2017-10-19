@@ -14,7 +14,7 @@ import RxDatabaseSync
 
 class DatabaseSyncRxTests: XCTestCase {
   
-  let coredataConfigurator  = CoredataConfigurator(name: "DatabaseSyncRx", inMemory: false  )
+  let coredataConfigurator  = CoredataConfigurator(name: "DatabaseSyncRx")
   var provider: CoredataProvider!
   let bag = DisposeBag()
   
