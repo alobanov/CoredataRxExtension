@@ -1,0 +1,6 @@
+framework module RxDBSync {
+  umbrella header "RxDBSync-umbrella.h"
+
+  export *
+  module * { export * }
+}

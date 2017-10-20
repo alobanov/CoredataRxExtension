@@ -24,6 +24,6 @@ extension AbilityEntity {
 extension AbilityEntity: NSManagedObjectMappable {
   public static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T> {
     let mapper = EntityMapper<T>(context: context, object: object)
-    return mapper.mapObject(type: type).mapToType(type: T.self)
+    return mapper.mapObject().mapToType(type: T.self)
   }
 }

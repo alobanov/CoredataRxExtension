@@ -25,7 +25,7 @@ public class CoredataConfigurator {
     return CoredataProvider(dataStack: self.coredataStack)
   }()
   
-  func drop(completion: @escaping (NSError?)->Void) {
+  func drop(completion: @escaping (NSError?) -> Void) {
     self.coredataStack.drop { error in
       completion(error)
     }
