@@ -12,23 +12,51 @@ import Sync
 import RxSwift
 import ObjectMapper
 
+///
 public protocol CoredataMappable {
+  /// Save single entity by source dictionary and type
+  ///
+  /// - Parameters:
+  ///   - type: Type of `NSManagedObjectMappable`, ex. `PetEntity.self`
+  ///   - json: Source dictionary `JSONDictionary = [String: Any]`
+  /// - Returns: Observable<Void>
   func mapObject<T: NSManagedObjectMappable>(_ type: T.Type, json: JSONDictionary) -> Observable<Void>
+  
+  /// Save array of entity by source array of dictionary and type
+  ///
+  /// - Parameters:
+  ///   - type: Type of `NSManagedObjectMappable`, ex. `PetEntity.self`
+  ///   - json: Source array of dictionary `JSONArrayDictionary = [[String: Any]]`
+  /// - Returns: Observable<Void>
   func mapArray<T: NSManagedObjectMappable>(_ type: T.Type, jsonArray: JSONArrayDictionary) -> Observable<Void>
 //  func edit(_ closure: @escaping EditOperation.ActionClosure) -> Observable<Void>
 }
 
 public protocol CoredataDeletable {
+  
+  /// Delete `NSManagedObject` object by type and primary key value
+  ///
+  /// - Parameters:
+  ///   - type: Type of `NSManagedObjectMappable`, ex. `PetEntity.self`
+  ///   - id: `Any` object, usually type is `Int`
+  /// - Returns: Observable<Void>
   func delete<T: NSManagedObject>(_ type: T.Type, id: Any) -> Observable<Void>
+  
+  /// Delete list of `NSManagedObject` object by type and list of primary keys
+  ///
+  /// - Parameters:
+  ///   - type: Type of `NSManagedObjectMappable`, ex. `PetEntity.self`
+  ///   - ids: List of `Any` objects, usually type is `Int`
+  /// - Returns: Observable<Void>
   func delete<T: NSManagedObject>(_ type: T.Type, ids: [Any]) -> Observable<Void>
 }
 
 public protocol CoredataFetcher {
-  func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate, sortBy: String?, asc: Bool?) -> [T]?
+  func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate, sort: [NSSortDescriptor]?) -> [T]?
   func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate) -> [T]?
   func firstModel<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate) -> T?
   
-  func objects<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, sortBy: String?, asc: Bool?) -> [T]?
+  func objects<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, sort: [NSSortDescriptor]?) -> [T]?
   func firstObject<T: NSManagedObject>(type: T.Type, predicate: NSPredicate) -> T?
   
   func mainContext() -> NSManagedObjectContext
@@ -91,13 +119,12 @@ public extension CoredataCleanable  where Self: CoredataProvider {
         }
       })
       return Disposables.create()
-    }).observeOn(Schedulers.shared.mainScheduler)
+    }).observeOn(DBSchedulers.shared.mainScheduler)
   }
   
 }
 
 public extension CoredataMappable where Self: CoredataProvider {
-  
   func mapObject<T: NSManagedObjectMappable>(_ type: T.Type, json: JSONDictionary) -> Observable<Void> {
     return mapArray(type, jsonArray: [json])
   }
@@ -127,7 +154,7 @@ public extension CoredataMappable where Self: CoredataProvider {
       
       self?.serialOperationQueue.addOperation(op)
       return Disposables.create()
-    }).observeOn(Schedulers.shared.mainScheduler)
+    }).observeOn(DBSchedulers.shared.mainScheduler)
   }
   
 //  func edit(_ closure: @escaping EditOperation.ActionClosure) -> Observable<Void> {
@@ -161,17 +188,17 @@ public extension CoredataFetcher where Self: CoredataProvider {
   }
   
   func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate) -> [T]? {
-    return self.models(type: type, predicate: predicate, sortBy: nil, asc: nil)
+    return self.models(type: type, predicate: predicate, sort: nil)
   }
   
-  func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate, sortBy: String?, asc: Bool?) -> [T]? {
+  func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate, sort: [NSSortDescriptor]?) -> [T]? {
     do {
       let entityName = String(describing: type.self)
       let fetchRequest : NSFetchRequest<U> = NSFetchRequest(entityName: entityName)
       fetchRequest.predicate = predicate
       
-      if let sortField = sortBy {
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: sortField, ascending: asc ?? true)]
+      if let descriptors = sort {
+        fetchRequest.sortDescriptors = descriptors
       }
       
       let fetchedResults = try dataStack.mainContext.fetch(fetchRequest)
@@ -210,14 +237,14 @@ public extension CoredataFetcher where Self: CoredataProvider {
     }
   }
   
-  func objects<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, sortBy: String?, asc: Bool?) -> [T]? {
+  func objects<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, sort: [NSSortDescriptor]?) -> [T]? {
     do {
       let entityName = String(describing: type.self)
       let fetchRequest : NSFetchRequest<T> = NSFetchRequest(entityName: entityName)
       fetchRequest.predicate = predicate
       
-      if let sortField = sortBy {
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: sortField, ascending: asc ?? true)]
+      if let descriptors = sort {
+        fetchRequest.sortDescriptors = descriptors
       }
       
       return try self.dataStack.mainContext.fetch(fetchRequest)
@@ -265,7 +292,7 @@ public extension CoredataDeletable where Self: CoredataProvider {
       
       self?.serialOperationQueue.addOperation(op)
       return Disposables.create()
-    }).observeOn(Schedulers.shared.mainScheduler)
+    }).observeOn(DBSchedulers.shared.mainScheduler)
   }
   
 }

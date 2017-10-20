@@ -14,7 +14,7 @@
     <a title="Observable Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RxDataBaseSyncDoc Docs</a> (18% documented)</p>
+        <p><a href="../index.html">RxDataBaseSyncDoc Docs</a> (33% documented)</p>
         <p class="header-right"><a href="https://github.com/alobanov/RxDBSync"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -33,6 +33,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AsyncOperation.html">AsyncOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CoredataConfigurator.html">CoredataConfigurator</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/CoredataProvider.html">CoredataProvider</a>
@@ -108,6 +111,64 @@
             
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToVoidACyytGyF"></a>
+                    <a name="//apple_ref/swift/Method/mapToVoid()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToVoidACyytGyF">mapToVoid()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToTypeACyqd__Gqd__m4type_tlF"></a>
+                    <a name="//apple_ref/swift/Method/mapToType(type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToTypeACyqd__Gqd__m4type_tlF">mapToType(type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -204,16 +265,51 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Save entity from dictionary by type</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="n">mapDictionaryToEntity</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">U</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">databaseMapper</span><span class="p">:</span> <span class="kt"><a href="../Protocols/CoredataMappable.html">CoredataMappable</a></span> <span class="o">&amp;</span> <span class="kt"><a href="../Protocols/CoredataFetcher.html">CoredataFetcher</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of <code><a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></code>, ex. <code>PetEntity.self</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>databaseMapper</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Instance of CoredataProvider</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Observable <Void></p>
                       </div>
                     </section>
                   </div>
@@ -224,64 +320,6 @@
                     <a name="/s:7RxSwift10ObservableC0A15DataBaseSyncDocE21mapDictionaryToEntityACyqd__SgGqd_0_m_qd__m12mappableTypeAD15CoredataFetcher_AD0N8Mappablep14databaseMapperSSSg10primaryKeyqd_1_m0stM0t06ObjectR00P0Rd__AD09NSManageduP0Rd_0_r1_lF"></a>
                     <a name="//apple_ref/swift/Method/mapDictionaryToEntity(_:mappableType:databaseMapper:primaryKey:primaryKeyType:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:7RxSwift10ObservableC0A15DataBaseSyncDocE21mapDictionaryToEntityACyqd__SgGqd_0_m_qd__m12mappableTypeAD15CoredataFetcher_AD0N8Mappablep14databaseMapperSSSg10primaryKeyqd_1_m0stM0t06ObjectR00P0Rd__AD09NSManageduP0Rd_0_r1_lF">mapDictionaryToEntity(_:mappableType:databaseMapper:primaryKey:primaryKeyType:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToVoidACyytGyF"></a>
-                    <a name="//apple_ref/swift/Method/mapToVoid()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToVoidACyytGyF">mapToVoid()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">ObservableType</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToTypeACyqd__Gqd__m4type_tlF"></a>
-                    <a name="//apple_ref/swift/Method/mapToType(type:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:7RxSwift10ObservableC0A15DataBaseSyncDocE9mapToTypeACyqd__Gqd__m4type_tlF">mapToType(type:)</a>
                     </code>
                   </div>
                   <div class="height-container">

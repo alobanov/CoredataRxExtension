@@ -11,8 +11,6 @@ import Sync
 import RxDBSync
 
 public class CoredataConfigurator {
-  
-  // Singletone
   private var coredataStack: DataStack
   
   // MARK: - Initialization
@@ -21,11 +19,11 @@ public class CoredataConfigurator {
     self.coredataStack = DataStack(modelName: name, storeType: dataStackStoreType)
   }
   
-  lazy var queryProvider: CoredataProvider = {
+  public lazy var queryProvider: CoredataProvider = {
     return CoredataProvider(dataStack: self.coredataStack)
   }()
   
-  func drop(completion: @escaping (NSError?) -> Void) {
+  public func drop(completion: @escaping (NSError?) -> Void) {
     self.coredataStack.drop { error in
       completion(error)
     }

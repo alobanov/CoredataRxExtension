@@ -1,10 +1,192 @@
 {
   "warnings": [
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Data+Additions.swift",
-      "line": 12,
-      "symbol": "Data.toJSON()",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataConfigurator.swift",
+      "line": 13,
+      "symbol": "CoredataConfigurator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataConfigurator.swift",
+      "line": 17,
+      "symbol": "CoredataConfigurator.init(name:inMemory:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataConfigurator.swift",
+      "line": 22,
+      "symbol": "CoredataConfigurator.queryProvider",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataConfigurator.swift",
+      "line": 26,
+      "symbol": "CoredataConfigurator.drop(completion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": null,
+      "symbol": "CoredataCleanable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": null,
+      "symbol": "CoredataDeletable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": null,
+      "symbol": "CoredataFetcher",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 35,
+      "symbol": "CoredataDeletable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 54,
+      "symbol": "CoredataFetcher",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 55,
+      "symbol": "CoredataFetcher.models(type:predicate:sortBy:asc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 56,
+      "symbol": "CoredataFetcher.models(type:predicate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 57,
+      "symbol": "CoredataFetcher.firstModel(type:predicate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 59,
+      "symbol": "CoredataFetcher.objects(type:predicate:sortBy:asc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 60,
+      "symbol": "CoredataFetcher.firstObject(type:predicate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 62,
+      "symbol": "CoredataFetcher.mainContext()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 65,
+      "symbol": "CoredataCleanable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 66,
+      "symbol": "CoredataCleanable.clean(doNotDeleteEntities:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 69,
+      "symbol": "CoredataProvider",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 80,
+      "symbol": "CoredataProvider.init(dataStack:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 87,
+      "symbol": "CoredataCleanable.clean(doNotDeleteEntities:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 186,
+      "symbol": "CoredataFetcher.mainContext()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 190,
+      "symbol": "CoredataFetcher.models(type:predicate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 194,
+      "symbol": "CoredataFetcher.models(type:predicate:sortBy:asc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 219,
+      "symbol": "CoredataFetcher.firstModel(type:predicate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 240,
+      "symbol": "CoredataFetcher.objects(type:predicate:sortBy:asc:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/CoredataProvider.swift",
+      "line": 256,
+      "symbol": "CoredataFetcher.firstObject(type:predicate:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/EntityMapper.swift",
+      "line": 17,
+      "symbol": "NSManagedObjectMappable.map(type:object:context:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -15,322 +197,84 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+CoredataMapper.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+CoredataMapper.swift",
       "line": 6,
       "symbol": "DummyModel",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+CoredataMapper.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+CoredataMapper.swift",
       "line": 25,
       "symbol": "Observable.mapIdsFromDictionaryArray(keyType:primaryKey:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+CoredataMapper.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+CoredataMapper.swift",
       "line": 35,
       "symbol": "Observable.mapDictionaryToArrayEntities(_:nodePath:databaseMapper:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+CoredataMapper.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+CoredataMapper.swift",
       "line": 39,
       "symbol": "Observable.mapDictionaryToArrayEntities(_:nodePath:databaseMapper:primaryKey:primaryKeyType:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+CoredataMapper.swift",
-      "line": 59,
-      "symbol": "Observable.mapDictionaryToEntity(_:databaseMapper:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+CoredataMapper.swift",
-      "line": 63,
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+CoredataMapper.swift",
+      "line": 70,
       "symbol": "Observable.mapDictionaryToEntity(_:mappableType:databaseMapper:primaryKey:primaryKeyType:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+Operators.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+Operators.swift",
       "line": 5,
       "symbol": "Observable.mapToVoid()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observable+Operators.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observable+Operators.swift",
       "line": 9,
       "symbol": "Observable.mapToType(type:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/observable/Observer+Transformer.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/extension/Observer+Transformer.swift",
       "line": 37,
       "symbol": "Observable.transformDictionaryToArray(nodePath:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/EntityMapper.swift",
-      "line": 17,
-      "symbol": "NSManagedObjectMappable.map(type:object:context:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": null,
-      "symbol": "CoredataCleanable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": null,
-      "symbol": "CoredataDeletable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": null,
-      "symbol": "CoredataFetcher",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": null,
-      "symbol": "CoredataMappable",
-      "symbol_kind": "source.lang.swift.decl.extension",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 15,
-      "symbol": "CoredataMappable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 16,
-      "symbol": "CoredataMappable.mapObject(_:json:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 17,
-      "symbol": "CoredataMappable.mapArray(_:jsonArray:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 21,
-      "symbol": "CoredataDeletable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 22,
-      "symbol": "CoredataDeletable.delete(_:id:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 23,
-      "symbol": "CoredataDeletable.delete(_:ids:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 26,
-      "symbol": "CoredataFetcher",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 27,
-      "symbol": "CoredataFetcher.models(type:predicate:sortBy:asc:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 28,
-      "symbol": "CoredataFetcher.models(type:predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 29,
-      "symbol": "CoredataFetcher.firstModel(type:predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 31,
-      "symbol": "CoredataFetcher.objects(type:predicate:sortBy:asc:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 32,
-      "symbol": "CoredataFetcher.firstObject(type:predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 34,
-      "symbol": "CoredataFetcher.mainContext()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 37,
-      "symbol": "CoredataCleanable",
-      "symbol_kind": "source.lang.swift.decl.protocol",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 38,
-      "symbol": "CoredataCleanable.clean(doNotDeleteEntities:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 41,
-      "symbol": "CoredataProvider",
-      "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 52,
-      "symbol": "CoredataProvider.init(dataStack:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 59,
-      "symbol": "CoredataCleanable.clean(doNotDeleteEntities:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 101,
-      "symbol": "CoredataMappable.mapObject(_:json:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 105,
-      "symbol": "CoredataMappable.mapArray(_:jsonArray:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 159,
-      "symbol": "CoredataFetcher.mainContext()",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 163,
-      "symbol": "CoredataFetcher.models(type:predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 167,
-      "symbol": "CoredataFetcher.models(type:predicate:sortBy:asc:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 192,
-      "symbol": "CoredataFetcher.firstModel(type:predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 213,
-      "symbol": "CoredataFetcher.objects(type:predicate:sortBy:asc:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 229,
-      "symbol": "CoredataFetcher.firstObject(type:predicate:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 244,
-      "symbol": "CoredataDeletable.delete(_:id:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/coredata/CoredataProvider.swift",
-      "line": 248,
-      "symbol": "CoredataDeletable.delete(_:ids:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/operation/DeleteOperation.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/operation/DeleteOperation.swift",
       "line": 14,
       "symbol": "DeleteArrayOperation",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/operation/DeleteOperation.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/operation/DeleteOperation.swift",
       "line": 25,
       "symbol": "DeleteArrayOperation.main()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/operation/EditOperation.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/operation/EditOperation.swift",
       "line": 14,
       "symbol": "EditOperation",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/provider/operation/EditOperation.swift",
+      "file": "/Users/alobanov/git/CoredataRxExtension/Sources/operation/EditOperation.swift",
       "line": 29,
       "symbol": "EditOperation.main()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",

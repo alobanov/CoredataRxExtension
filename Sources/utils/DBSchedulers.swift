@@ -9,8 +9,8 @@
 import Foundation
 import RxSwift
 
-class Schedulers {
-  static let shared = Schedulers() // Singletone
+class DBSchedulers {
+  static let shared = DBSchedulers() // Singletone
 
   let backgroundScheduler: ImmediateSchedulerType
   let mainScheduler: SerialDispatchQueueScheduler

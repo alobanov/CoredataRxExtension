@@ -13,7 +13,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">RxDataBaseSyncDoc Docs</a> (18% documented)</p>
+        <p><a href="index.html">RxDataBaseSyncDoc Docs</a> (33% documented)</p>
         <p class="header-right"><a href="https://github.com/alobanov/RxDBSync"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -32,6 +32,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/AsyncOperation.html">AsyncOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CoredataConfigurator.html">CoredataConfigurator</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/CoredataProvider.html">CoredataProvider</a>
@@ -107,9 +110,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperC"></a>
-                    <a name="//apple_ref/swift/Class/EntityMapper" class="dashAnchor"></a>
-                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperC">EntityMapper</a>
+                    <a name="/s:17RxDataBaseSyncDoc20CoredataConfiguratorC"></a>
+                    <a name="//apple_ref/swift/Class/CoredataConfigurator" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc20CoredataConfiguratorC">CoredataConfigurator</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -117,23 +120,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>EntityMapper, provide mappable methods for parsing and saving entities and it relations</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mapper</span> <span class="o">=</span> <span class="kt">EntityMapper</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="n">object</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">mapHero</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToMany</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">hero</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">HeroEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">mapAbilities</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToMany</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">abilities</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AbilityEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">mapUniverse</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToOne</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">universe</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UniverseEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">mapSelf</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapSelf</span><span class="p">()</span><span class="o">.</span><span class="nf">mapToType</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
-</code></pre>
+                        <p>Undocumented</p>
 
-                        <a href="Classes/EntityMapper.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">EntityMapper</span><span class="o">&lt;</span><span class="kt">Parent</span><span class="p">:</span> <span class="kt"><a href="Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span></code></pre>
-
-                        </div>
+                        <a href="Classes/CoredataConfigurator.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -182,6 +171,45 @@
                         <p>Undocumented</p>
 
                         <a href="Classes/DeleteArrayOperation.html" class="slightly-smaller">See more</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperC"></a>
+                    <a name="//apple_ref/swift/Class/EntityMapper" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperC">EntityMapper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>EntityMapper, provide methods for parsing and saving entities and it relations</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mapper</span> <span class="o">=</span> <span class="kt">EntityMapper</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="n">object</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">mapHero</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToMany</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">hero</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">HeroEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapAbilities</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToMany</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">abilities</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AbilityEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapUniverse</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToOne</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">universe</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UniverseEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapSelf</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapSelf</span><span class="p">()</span><span class="o">.</span><span class="nf">mapToType</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/EntityMapper.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">EntityMapper</span><span class="o">&lt;</span><span class="kt">BaseType</span><span class="p">:</span> <span class="kt"><a href="Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>

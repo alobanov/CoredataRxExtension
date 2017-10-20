@@ -9,6 +9,11 @@
 import Foundation
 
 public extension Data {
+  
+  /// Transform Data to DictionaryAnyObject = [String: AnyObject]
+  ///
+  /// - Returns: DictionaryAnyObject = [String: AnyObject]
+  /// - Throws: Error serialization failed
   func toJSON() throws -> DictionaryAnyObject? {
     guard let json = try JSONSerialization.jsonObject(with: self, options: .mutableContainers) as? DictionaryAnyObject else {
       throw NSError.define(description: "Data could`t serialized to Dictionary")

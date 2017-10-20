@@ -60,7 +60,7 @@ class CoredataFetcher: XCTestCase {
       
       // Запрос всех злодеев с которыми сражается найденый герой
       let pred1 = NSPredicate(format: "SUBQUERY(heroes, $m, ANY $m.id IN %@).@count > 0", [hero.id])
-      if let enemies: [EnemyModel] = self.provider.models(type: EnemyEntity.self, predicate: pred1, sortBy: "name", asc: true) {
+      if let enemies: [EnemyModel] = self.provider.models(type: EnemyEntity.self, predicate: pred1, sort: [NSSortDescriptor(key: "name", ascending: true)]) {
         let first = enemies[0]
         XCTAssertEqual(first.name ?? "", "Танос")
         XCTAssertEqual(first.id, 3)

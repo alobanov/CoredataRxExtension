@@ -49,12 +49,12 @@ class DatabaseSyncRxTests: XCTestCase {
     Observable.zip(enemies, heroes)
       .map({ [weak self] _ in
         guard let heroes: [HeroModel] = self?.provider.models(type: HeroEntity.self,
-                                                              predicate: all, sortBy: "id", asc: true) else {
+                                                              predicate: all, sort: [NSSortDescriptor(key: "id", ascending: true)]) else {
           throw NSError.define(description: "Model not found in database")
         }
         
         guard let enemies: [EnemyModel] = self?.provider.models(type: EnemyEntity.self,
-                                                                predicate: all, sortBy: "id", asc: true) else {
+                                                                predicate: all, sort: [NSSortDescriptor(key: "id", ascending: true)]) else {
           throw NSError.define(description: "Model not found in database")
         }
         

@@ -39,7 +39,7 @@ public extension Observable {
   func mapDictionaryToArrayEntities<U: NSManagedObjectMappable, K>(_ type: U.Type, nodePath: [JSONSubscriptType]? = nil, databaseMapper: CoredataMappable & CoredataFetcher, primaryKey: String?, primaryKeyType: K.Type) -> Observable <[K]>
   {
     return
-      observeOn(Schedulers.shared.backgroundScheduler)
+      observeOn(DBSchedulers.shared.backgroundScheduler)
       .transformDictionaryToArray(nodePath: nodePath)
       .flatMap { list -> Observable<[K]> in
         return
@@ -53,16 +53,23 @@ public extension Observable {
               
               return Observable<DictionaryArray>.just(list).mapIdsFromDictionaryArray(keyType: primaryKeyType, primaryKey: key)
             }
-      }.observeOn(Schedulers.shared.mainScheduler)
+      }.observeOn(DBSchedulers.shared.mainScheduler)
   }
   
-  func mapDictionaryToEntity<U: NSManagedObjectMappable>(_ type: U.Type, databaseMapper: CoredataMappable & CoredataFetcher) -> Observable <Void> {
+  
+  /// Save entity from dictionary by type
+  ///
+  /// - Parameters:
+  ///   - type: Type of `NSManagedObjectMappable`, ex. `PetEntity.self`
+  ///   - databaseMapper: Instance of CoredataProvider
+  /// - Returns: Observable <Void>
+  func mapDictionaryToEntity<U: NSManagedObjectMappable>(_ type: U.Type, databaseMapper: CoredataMappable & CoredataFetcher) -> Observable<Void> {
     return mapDictionaryToEntity(type, mappableType: DummyModel.self, databaseMapper: databaseMapper, primaryKey: nil, primaryKeyType: Int.self).mapToVoid()
   }
   
   func mapDictionaryToEntity<T: Mappable, U: NSManagedObjectMappable, K>(_ type: U.Type, mappableType: T.Type, databaseMapper: CoredataMappable & CoredataFetcher, primaryKey: String?, primaryKeyType: K.Type) -> Observable <T?>
   {
-    return observeOn(Schedulers.shared.backgroundScheduler)
+    return observeOn(DBSchedulers.shared.backgroundScheduler)
       .flatMap { json -> Observable<T?> in
         guard let json = json as? DictionaryAnyObject else {
           throw NSError.define(description: "Can`t unwrap dictionary")
@@ -86,6 +93,6 @@ public extension Observable {
                   return databaseMapper.firstModel(type: U.self, predicate: predicate)
                 })
             }
-      }.observeOn(Schedulers.shared.mainScheduler)
+      }.observeOn(DBSchedulers.shared.mainScheduler)
   }
 }
