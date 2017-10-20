@@ -31,7 +31,7 @@ extension EnemyEntity: NSManagedObjectMappable {
     let mapHero = mapper.mapRelationToMany(relation: Relations.hero, type: HeroEntity.self)
     let mapAbilities = mapper.mapRelationToMany(relation: Relations.abilities, type: AbilityEntity.self)
     let mapUniverse = mapper.mapRelationToOne(relation: Relations.universe, type: UniverseEntity.self)
-    let mapSelf = mapper.mapObject().mapToType(type: self.self)
+    let mapSelf = mapper.mapSelf().mapToType(type: self.self)
     
     return Observable.zip(mapSelf, mapHero, mapAbilities, mapUniverse)
       .map({ (enemy, mapHero, mapAbilities, mapUniverse) -> EnemyEntity in

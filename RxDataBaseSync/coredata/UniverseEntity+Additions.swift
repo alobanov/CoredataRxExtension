@@ -24,6 +24,6 @@ extension UniverseEntity {
 extension UniverseEntity: NSManagedObjectMappable {
   public static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T> {
     let mapper = EntityMapper<T>(context: context, object: object)
-    return mapper.mapObject().mapToType(type: T.self)
+    return mapper.mapSelf().mapToType(type: T.self)
   }
 }

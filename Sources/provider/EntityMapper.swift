@@ -11,26 +11,56 @@ import CoreData
 import RxSwift
 import Sync
 
+
+/// NSManagedObjectMappable
 public protocol NSManagedObjectMappable where Self:NSManagedObject {
   static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T>
 }
 
+/// EntityMapper, provide mappable methods for parsing and saving entities and it relations
+/// ```swift
+/// let mapper = EntityMapper<T>(context: context, object: object)
+/// let mapHero = mapper.mapRelationToMany(relation: Relations.hero, type: HeroEntity.self)
+/// let mapAbilities = mapper.mapRelationToMany(relation: Relations.abilities, type: AbilityEntity.self)
+/// let mapUniverse = mapper.mapRelationToOne(relation: Relations.universe, type: UniverseEntity.self)
+/// let mapSelf = mapper.mapSelf().mapToType(type: self.self)
+/// ```
 public class EntityMapper<Parent: NSManagedObjectMappable> {
   private var context: NSManagedObjectContext
   private var object: JSONDictionary = [:]
   private var objects: JSONArrayDictionary = []
   
+  // MARK: Public methods
+  
+  /// Initialization of EntityMapper with Context and Dictionary
+  ///
+  /// - Parameters:
+  ///   - context: NSManagedObjectContext
+  ///   - object: JSONDictionary = [String: Any]
   public init(context: NSManagedObjectContext, object: JSONDictionary) {
     self.context = context
     self.object = object
   }
   
+  // Initialization of EntityMapper with Context and  Array of Dictionary
+  ///
+  /// - Parameters:
+  ///   - context: NSManagedObjectContext
+  ///   - object: JSONArrayDictionary = [[String: Any]]
   public init(context: NSManagedObjectContext, objects: JSONArrayDictionary) {
     self.context = context
     self.objects = objects
   }
   
- public func mapRelationToOne<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<T?>  {
+  // MARK: - Map relations
+  
+  /// Map self object relation by node name "to-One"
+  ///
+  /// - Parameters:
+  ///   - relation: String: Node relation name
+  ///   - type: Entity NSManagedObjectMappable type, for example: PetEntity.self
+  /// - Returns: Optional observable of T: NSManagedObjectMappable
+  public func mapRelationToOne<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<T?>  {
     guard let relationKey = syncRelationKey(type: Parent.self, relation: relation) else {
       return Observable.just(nil)
     }
@@ -44,6 +74,12 @@ public class EntityMapper<Parent: NSManagedObjectMappable> {
     return mapping
   }
   
+  /// Map self object relation by node name "to-Many"
+  ///
+  /// - Parameters:
+  ///   - relation: String: Node relation name
+  ///   - type: Entity NSManagedObjectMappable type, for example: PetEntity.self
+  /// - Returns: Optional observable of T: NSManagedObjectMappable
   public func mapRelationToMany<T: NSManagedObjectMappable>(relation: String, type: T.Type) -> Observable<[T]?>  {
     var mapping: Observable<[T]?>
     guard let relationKey = syncRelationKey(type: Parent.self, relation: relation) else {
@@ -59,7 +95,12 @@ public class EntityMapper<Parent: NSManagedObjectMappable> {
     return mapping
   }
   
-  public func mapObject() -> Observable<Parent> {
+  // MARK: Self Mapping
+  
+  /// Map self object
+  ///
+  /// - Returns: Observable of self generic class type
+  public func mapSelf() -> Observable<Parent> {
     return Observable<Parent>.create({ observer -> Disposable in
       let entityName = String(describing: Parent.self)
       do {
@@ -77,6 +118,10 @@ public class EntityMapper<Parent: NSManagedObjectMappable> {
     })
   }
   
+  /// Map array by entity type
+  ///
+  /// - Parameter type: Entity NSManagedObjectMappable type, ex: PetEntity.self
+  /// - Returns: Observable of generic type
   public func mapArray<U: NSManagedObjectMappable>(type: U.Type) -> Observable<[U]> {
     var operations = [Observable<U>]()
     for obj in objects {

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EntityMapper Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/EntityMapper" class="dashAnchor"></a>
+    <a title="EntityMapper Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RxDataBaseSyncDoc Docs</a> (18% documented)</p>
+        <p class="header-right"><a href="https://github.com/AirMap/AirMapSDK-Swift"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RxDataBaseSyncDoc Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        EntityMapper Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AsyncOperation.html">AsyncOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CoredataProvider.html">CoredataProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DeleteArrayOperation.html">DeleteArrayOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EditOperation.html">EditOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EntityMapper.html">EntityMapper</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSError.html">NSError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Observable.html">Observable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CoredataCleanable.html">CoredataCleanable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CoredataDeletable.html">CoredataDeletable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CoredataFetcher.html">CoredataFetcher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CoredataMappable.html">CoredataMappable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DummyModel.html">DummyModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:17RxDataBaseSyncDoc0a8DatabaseD8ConstantV">RxDatabaseSyncConstant</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>EntityMapper</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">EntityMapper</span><span class="o">&lt;</span><span class="kt">Parent</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>EntityMapper, provide mappable methods for parsing and saving entities and it relations</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">mapper</span> <span class="o">=</span> <span class="kt">EntityMapper</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="n">context</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="n">object</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapHero</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToMany</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">hero</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">HeroEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapAbilities</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToMany</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">abilities</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">AbilityEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapUniverse</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapRelationToOne</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">Relations</span><span class="o">.</span><span class="n">universe</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">UniverseEntity</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">mapSelf</span> <span class="o">=</span> <span class="n">mapper</span><span class="o">.</span><span class="nf">mapSelf</span><span class="p">()</span><span class="o">.</span><span class="nf">mapToType</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20methods"></a>
+                <a name="//apple_ref/swift/Section/Public methods" class="dashAnchor"></a>
+                <a href="#/Public%20methods">
+                  <h3 class="section-name">Public methods</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperCACyxGSo22NSManagedObjectContextC7context_s10DictionaryVySSypG6objecttcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(context:object:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperCACyxGSo22NSManagedObjectContextC7context_s10DictionaryVySSypG6objecttcfc">init(context:object:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialization of EntityMapper with Context and Dictionary</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">NSManagedObjectContext</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">JSONDictionary</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSManagedObjectContext</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>JSONDictionary = [String: Any]</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperCACyxGSo22NSManagedObjectContextC7context_Says10DictionaryVySSypGG7objectstcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(context:objects:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperCACyxGSo22NSManagedObjectContextC7context_Says10DictionaryVySSypGG7objectstcfc">init(context:objects:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">NSManagedObjectContext</span><span class="p">,</span> <span class="nv">objects</span><span class="p">:</span> <span class="kt">JSONArrayDictionary</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>context</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSManagedObjectContext</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>JSONArrayDictionary = [[String: Any]]</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Map%20relations"></a>
+                <a name="//apple_ref/swift/Section/Map relations" class="dashAnchor"></a>
+                <a href="#/Map%20relations">
+                  <h3 class="section-name">Map relations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperC16mapRelationToOne0A5Swift10ObservableCyqd__SgGSS8relation_qd__m4typetAA23NSManagedObjectMappableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/mapRelationToOne(relation:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperC16mapRelationToOne0A5Swift10ObservableCyqd__SgGSS8relation_qd__m4typetAA23NSManagedObjectMappableRd__lF">mapRelationToOne(relation:type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Map self object relation by node name <q>to-One</q></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mapRelationToOne</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>relation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String: Node relation name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Entity NSManagedObjectMappable type, for example: PetEntity.self</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Optional observable of T: NSManagedObjectMappable</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperC17mapRelationToMany0A5Swift10ObservableCySayqd__GSgGSS8relation_qd__m4typetAA23NSManagedObjectMappableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/mapRelationToMany(relation:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperC17mapRelationToMany0A5Swift10ObservableCySayqd__GSgGSS8relation_qd__m4typetAA23NSManagedObjectMappableRd__lF">mapRelationToMany(relation:type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Map self object relation by node name <q>to-Many</q></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mapRelationToMany</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">relation</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]?</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>relation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>String: Node relation name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Entity NSManagedObjectMappable type, for example: PetEntity.self</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Optional observable of T: NSManagedObjectMappable</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Self%20Mapping"></a>
+                <a name="//apple_ref/swift/Section/Self Mapping" class="dashAnchor"></a>
+                <a href="#/Self%20Mapping">
+                  <h3 class="section-name">Self Mapping</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperC7mapSelf0A5Swift10ObservableCyxGyF"></a>
+                    <a name="//apple_ref/swift/Method/mapSelf()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperC7mapSelf0A5Swift10ObservableCyxGyF">mapSelf()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Map self object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapSelf</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt">Parent</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Observable of self generic class type</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17RxDataBaseSyncDoc12EntityMapperC8mapArray0A5Swift10ObservableCySayqd__GGqd__m4type_tAA23NSManagedObjectMappableRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/mapArray(type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17RxDataBaseSyncDoc12EntityMapperC8mapArray0A5Swift10ObservableCySayqd__GGqd__m4type_tAA23NSManagedObjectMappableRd__lF">mapArray(type:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Map array by entity type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mapArray</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NSManagedObjectMappable.html">NSManagedObjectMappable</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">U</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">U</span><span class="p">]</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Entity NSManagedObjectMappable type, ex: PetEntity.self</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Observable of generic type</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/airmap" target="_blank" rel="external">RxDatabaseSyncLib, Inc.</a>. All rights reserved. (Last updated: 2017-10-20)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

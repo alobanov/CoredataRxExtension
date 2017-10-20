@@ -2,12 +2,13 @@ theme: fullwidth
 author: RxDatabaseSyncLib, Inc.
 author_url: https://github.com/airmap
 github_url: https://github.com/AirMap/AirMapSDK-Swift
-module: RxDatabaseSyncLib
-xcodebuild_arguments: [-workspace,RxDatabaseSyncLib.xcworkspace,-scheme,RxDatabaseSyncLib]
+module: RxDataBaseSyncDoc
+xcodebuild_arguments: [-workspace,RxDataBaseSync.xcworkspace,-scheme,RxDataBaseSyncDoc]
 output: docs
 clean: true
 skip_undocumented: false
 min_acl: public
+theme: apple
 exclude:
 - "**/JSONSerialization.swift"
 - "**/EquatableHashableComparable.swift"
@@ -19,72 +20,3 @@ exclude:
 - "**/Deprecated*"
 - "**/UI/*"
 - "**/*LocalizedStrings.swift"
-custom_categories:
-- name: AirMap
-  children:
-  - AirMap
-  - AirMapConfiguration
-  - Result
-- name: Advisories
-  children:
-  - AirMapAirspaceStatus
-  - AirMapAdvisory
-  - AirMapAdvisoryRequirements
-  - AirMapAirspaceType
-  - AirMapWeather
-  - PropertiesType
-- name: Aircraft
-  children:
-  - AirMapAircraft
-  - AirMapAircraftModel
-  - AirMapAircraftManufacturer
-- name: Authentication
-  children:
-  - AirMapToken
-  - Auth0Credentials
-  - Auth0ApiError
-- name: Flights
-  children:
-  - AirMapFlightPlan
-  - AirMapFlightFeature
-  - AirMapFlightBriefing
-  - AirMapFlight
-  - AirMapFlightGeometryType
-- name: Geometry
-  children:
-  - AirMapGeometry
-  - AirMapPoint
-  - AirMapPath
-  - AirMapPolygon
-- name: Pilot
-  children:
-  - AirMapPilot
-  - AirMapPilotStats
-- name: Rulesets & Jurisdictions
-  children:
-  - AirMapJurisdiction
-  - AirMapRuleset
-  - AirMapRule
-  - AirMapAuthority
-- name: Traffic
-  children:
-  - AirMapTraffic
-  - AirMapTrafficProperties
-  - AirMapTrafficObserver
-- name: Units
-  children:
-  - Celcius
-  - Fahrenheit
-  - Feet
-  - Hectares
-  - Kilometers
-  - KilometersPerHour
-  - Knots
-  - Meters
-- name: Errors
-  children:
-  - AirMapError
-  - AirMapApiError
-  - AirMapApiParameterError
-  - AirMapSerializationError
-  - AirMapTelemetryError

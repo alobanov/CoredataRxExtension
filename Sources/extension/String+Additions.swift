@@ -14,7 +14,7 @@ extension String {
     var result = self
     do {
       let regex = try NSRegularExpression(pattern: pattern, options: [])
-      let range = NSRange(location: 0, length: self.characters.count)
+      let range = NSRange(location: 0, length: self.count)
       result = regex.stringByReplacingMatches(in: self, options: [], range: range, withTemplate: "$1_$2").lowercased()
     } catch { }
     return result

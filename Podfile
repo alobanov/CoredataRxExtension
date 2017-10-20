@@ -11,3 +11,8 @@ target 'RxDataBaseSyncTests' do
     pod 'RxTest', '~> 3'
     pod 'RxDBSync', :path => '.'
 end
+
+target 'RxDataBaseSyncDoc' do
+    inherit! :search_paths
+    pod 'RxDBSync', :path => '.'
+end
