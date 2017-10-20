@@ -1,7 +1,6 @@
-theme: fullwidth
-author: RxDatabaseSyncLib, Inc.
-author_url: https://github.com/airmap
-github_url: https://github.com/AirMap/AirMapSDK-Swift
+author: RxDBSync
+author_url: https://github.com/alobanov
+github_url: https://github.com/alobanov/RxDBSync
 module: RxDataBaseSyncDoc
 xcodebuild_arguments: [-workspace,RxDataBaseSync.xcworkspace,-scheme,RxDataBaseSyncDoc]
 output: docs
