@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                  = "RxDBSync"
-    s.version               = "0.1.0"
+    s.version               = "0.2.0"
     s.summary               = "Provides convenient sync JSON with Core Data via reactive extensions"
     s.description           = <<-DESC
     Provides convenient sync JSON with Core Data via reactive extensions:
