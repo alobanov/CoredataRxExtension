@@ -1,6 +1,0 @@
-framework module Pods_RxDataBaseSync {
-  umbrella header "Pods-RxDataBaseSync-umbrella.h"
-
-  export *
-  module * { export * }
-}
