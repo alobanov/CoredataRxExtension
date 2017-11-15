@@ -11,7 +11,8 @@ import RxSwift
 import CoreData
 import RxDBSync
 
-extension AbilityEntity {
+extension AbilityEntity: NSManagedObjectMappable {
+  
   struct Fields {
     static let id = "id"
   }
@@ -19,9 +20,7 @@ extension AbilityEntity {
   struct Relations {
     static let heroes = "characters"
   }
-}
-
-extension AbilityEntity: NSManagedObjectMappable {
+  
   public static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T> {
     let mapper = EntityMapper<T>(context: context, object: object)
     return mapper.mapSelf().mapToType(type: T.self)

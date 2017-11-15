@@ -11,7 +11,7 @@ import RxSwift
 import CoreData
 import RxDBSync
 
-extension HeroEntity {
+extension HeroEntity: NSManagedObjectMappable {
   struct Fields {
     static let id = "id"
   }
@@ -21,9 +21,7 @@ extension HeroEntity {
     static let abilities = "abilities"
     static let universe = "universe"
   }
-}
-
-extension HeroEntity: NSManagedObjectMappable {
+  
   public static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T> {    
     let mapper = EntityMapper<T>(context: context, object: object)
     
@@ -31,7 +29,7 @@ extension HeroEntity: NSManagedObjectMappable {
     let mapAbilities = mapper.mapRelationToMany(relation: Relations.abilities, type: AbilityEntity.self)
     let mapUniverse = mapper.mapRelationToOne(relation: Relations.universe, type: UniverseEntity.self)
     
-    let mapSelf = mapper.mapSelf().mapToType(type: self.self)
+    let mapSelf = mapper.mapSelf().mapToType(type: HeroEntity.self)
     
     return Observable.zip(mapSelf, mapEnemies, mapAbilities, mapUniverse)
       .map({ (hero, mapEnemies, mapAbilities, mapUniverse) -> HeroEntity in

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13241" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AbilityEntity" representedClassName="AbilityEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,22 +24,22 @@
         </relationship>
     </entity>
     <entity name="HeroEntity" representedClassName="HeroEntity" parentEntity="CharacterEntity" syncable="YES" codeGenerationType="class">
-        <relationship name="enemies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EnemyEntity" inverseName="heroes" inverseEntity="EnemyEntity" syncable="YES"/>
-    </entity>
-    <entity name="UniverseEntity" representedClassName="UniverseEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CharacterEntity" inverseName="universe" inverseEntity="CharacterEntity" syncable="YES">
+        <relationship name="enemies" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EnemyEntity" inverseName="heroes" inverseEntity="EnemyEntity" syncable="YES">
             <userInfo>
                 <entry key="sync.nonExportable" value="true"/>
             </userInfo>
         </relationship>
     </entity>
+    <entity name="UniverseEntity" representedClassName="UniverseEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CharacterEntity" inverseName="universe" inverseEntity="CharacterEntity" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="AbilityEntity" positionX="-567" positionY="279" width="128" height="88"/>
-        <element name="EnemyEntity" positionX="-353" positionY="203" width="128" height="58"/>
-        <element name="HeroEntity" positionX="-362" positionY="45" width="128" height="58"/>
-        <element name="UniverseEntity" positionX="-738" positionY="279" width="128" height="88"/>
+        <element name="AbilityEntity" positionX="-299" positionY="342" width="128" height="88"/>
         <element name="CharacterEntity" positionX="-578" positionY="78" width="128" height="120"/>
+        <element name="EnemyEntity" positionX="-101" positionY="171" width="128" height="58"/>
+        <element name="HeroEntity" positionX="-362" positionY="45" width="128" height="60"/>
+        <element name="UniverseEntity" positionX="-738" positionY="279" width="128" height="88"/>
     </elements>
 </model>

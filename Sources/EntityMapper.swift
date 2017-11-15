@@ -11,8 +11,8 @@ import CoreData
 import RxSwift
 import Sync
 
-
 /// NSManagedObjectMappable
+
 public protocol NSManagedObjectMappable where Self:NSManagedObject {
   static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T>
 }

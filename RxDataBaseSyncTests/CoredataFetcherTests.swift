@@ -18,6 +18,8 @@ class CoredataFetcher: XCTestCase {
   var provider: CoredataProvider!
   let bag = DisposeBag()
   
+  let logger = Atlantis.logger
+  
   override func setUp() {
     super.setUp()
     // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -59,8 +61,8 @@ class CoredataFetcher: XCTestCase {
       }
       
       // Запрос всех злодеев с которыми сражается найденый герой
-      let pred1 = NSPredicate(format: "SUBQUERY(heroes, $m, ANY $m.id IN %@).@count > 0", [hero.id])
-      if let enemies: [EnemyModel] = self.provider.models(type: EnemyEntity.self, predicate: pred1, sort: [NSSortDescriptor(key: "name", ascending: true)]) {
+      let descroptors = [NSSortDescriptor(key: "name", ascending: true)]
+      if let enemies: [EnemyModel] = self.provider.relation(from: EnemyEntity.self, name: "heroes", pk: hero.id, pkKey: "id", sort: descroptors) {
         let first = enemies[0]
         XCTAssertEqual(first.name ?? "", "Танос")
         XCTAssertEqual(first.id, 3)

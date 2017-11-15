@@ -1,8 +1,8 @@
 PODS:
-  - ObjectMapper (3.0.0)
+  - ObjectMapper (3.1.0)
   - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
-  - RxDBSync (0.1.0):
+  - RxDBSync (0.2.0):
     - ObjectMapper
     - RxCocoa (~> 3)
     - RxSwift (~> 3)
@@ -11,7 +11,7 @@ PODS:
   - RxSwift (3.6.1)
   - RxTest (3.6.1):
     - RxSwift (~> 3.6)
-  - SwiftyJSON (3.1.4)
+  - SwiftyJSON (4.0.0)
   - Sync (3.3.0)
 
 DEPENDENCIES:
@@ -23,12 +23,12 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
+  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
-  RxDBSync: 3ad61b6522f96d2fb3f6fe2207d22ceba4d7619b
+  RxDBSync: 56b2e8133e837ab291affbac9d1cbc10e6dbcf22
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Sync: 7bf0699de46e470d68dc5f1f8408e4c19536c71f
 
 PODFILE CHECKSUM: 7b407c50554e99a256056b39ad6535cf9ce5529c

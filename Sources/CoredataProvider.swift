@@ -54,6 +54,7 @@ public protocol CoredataDeletable {
 public protocol CoredataFetcher {
   func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate, sort: [NSSortDescriptor]?) -> [T]?
   func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate) -> [T]?
+  func relation<T: Mappable, U: NSManagedObject>(from: U.Type, name: String, pk: Any, pkKey: String, sort: [NSSortDescriptor]?) -> [T]?
   func firstModel<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate) -> T?
   
   func objects<T: NSManagedObject>(type: T.Type, predicate: NSPredicate, sort: [NSSortDescriptor]?) -> [T]?
@@ -185,6 +186,11 @@ public extension CoredataFetcher where Self: CoredataProvider {
   
   func mainContext() -> NSManagedObjectContext {
     return dataStack.mainContext
+  }
+  
+  func relation<T: Mappable, U: NSManagedObject>(from: U.Type, name: String, pk: Any, pkKey: String, sort: [NSSortDescriptor]?) -> [T]? {
+    let relationPred = NSPredicate(format: "SUBQUERY(\(name), $m, ANY $m.\(pkKey) IN %@).@count > 0", [pk])
+    return self.models(type: U.self, predicate: relationPred, sort: sort)
   }
   
   func models<T: Mappable, U: NSManagedObject>(type: U.Type, predicate: NSPredicate) -> [T]? {

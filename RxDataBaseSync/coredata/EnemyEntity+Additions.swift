@@ -11,7 +11,7 @@ import RxSwift
 import CoreData
 import RxDBSync
 
-extension EnemyEntity {
+extension EnemyEntity: NSManagedObjectMappable {
   struct Fields {
     static let id = "id"
   }
@@ -21,9 +21,7 @@ extension EnemyEntity {
     static let abilities = "abilities"
     static let universe = "universe"
   }
-}
-
-extension EnemyEntity: NSManagedObjectMappable {
+  
   public static func map<T:NSManagedObjectMappable>(type:T.Type, object: JSONDictionary, context: NSManagedObjectContext) -> Observable<T> {
     
     let mapper = EntityMapper<T>(context: context, object: object)

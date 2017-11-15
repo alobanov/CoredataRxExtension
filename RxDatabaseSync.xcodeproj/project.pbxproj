@@ -26,6 +26,7 @@
 		E823FE7D1F9A0F97008F512B /* DBSchedulers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823FE6E1F9A0F97008F512B /* DBSchedulers.swift */; };
 		E823FE7E1F9A0F97008F512B /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823FE6F1F9A0F97008F512B /* AsyncOperation.swift */; };
 		E823FE801F9A1001008F512B /* CoredataConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E823FE7F1F9A1001008F512B /* CoredataConfigurator.swift */; };
+		E8783F7C1FBC9D6100795ED8 /* Atlantis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8783F7B1FBC9D6000795ED8 /* Atlantis.swift */; };
 		E8A9B7AF1F99F948003D8A96 /* EnemyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A9B79F1F99F947003D8A96 /* EnemyModel.swift */; };
 		E8A9B7B01F99F948003D8A96 /* AbilityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A9B7A01F99F947003D8A96 /* AbilityModel.swift */; };
 		E8A9B7B11F99F948003D8A96 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A9B7A11F99F947003D8A96 /* HeroModel.swift */; };
@@ -91,6 +92,7 @@
 		E823FE6E1F9A0F97008F512B /* DBSchedulers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBSchedulers.swift; sourceTree = "<group>"; };
 		E823FE6F1F9A0F97008F512B /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		E823FE7F1F9A1001008F512B /* CoredataConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoredataConfigurator.swift; sourceTree = "<group>"; };
+		E8783F7B1FBC9D6000795ED8 /* Atlantis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Atlantis.swift; sourceTree = "<group>"; };
 		E8A9B79F1F99F947003D8A96 /* EnemyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyModel.swift; sourceTree = "<group>"; };
 		E8A9B7A01F99F947003D8A96 /* AbilityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbilityModel.swift; sourceTree = "<group>"; };
 		E8A9B7A11F99F947003D8A96 /* HeroModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		E8A9B7AA1F99F947003D8A96 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				E8783F7B1FBC9D6000795ED8 /* Atlantis.swift */,
 				E8A9B7AB1F99F947003D8A96 /* JSONReader */,
 				E8A9B7AD1F99F947003D8A96 /* FileReader */,
 			);
@@ -713,6 +716,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8A9B7B01F99F948003D8A96 /* AbilityModel.swift in Sources */,
+				E8783F7C1FBC9D6100795ED8 /* Atlantis.swift in Sources */,
 				E8A9B7B41F99F948003D8A96 /* UniverseEntity+Additions.swift in Sources */,
 				E8E3167A1F99F85400DBE641 /* ViewController.swift in Sources */,
 				E8A9B7B91F99F948003D8A96 /* FileReader.swift in Sources */,
